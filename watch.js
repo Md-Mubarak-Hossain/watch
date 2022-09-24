@@ -18,13 +18,11 @@ setInterval(() => {
             }
         }
     }
-    // console.log(second);
-    const sec = document.getElementById('second');
-    sec.innerText = second;
-    const mint = document.getElementById('minute');
-    mint.innerText = minute;
-    const hr = document.getElementById('hour');
-    hr.innerText = hour;
+    console.log(hour, minute, second);
+    const watchTimeSet = document.getElementById('watchTime');
+    watchTimeSet.innerHTML = `<span>
+    ${hour}ঃ${minute}ঃ${second}
+    </span>`;
 }, 1000);
 
 function converter(parameter) {
@@ -34,6 +32,4 @@ function converter(parameter) {
         return parameterString.join('');
     }
     else return parameterString.join('');
-
-
 }
