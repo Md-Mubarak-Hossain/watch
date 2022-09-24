@@ -1,8 +1,8 @@
 body {
 
     text-align: center;
-    margin-top: 100px;
-    font-size: 100px;
+    margin-top: 10px;
+
     font-weight: bolder;
     display: flex;
     flex-direction: column;
@@ -11,10 +11,11 @@ body {
 }
 
 div {
+    font-size: 100px;
     color: yellow;
     border: 1px solid black;
     width: 640px;
-    margin: 10px;
+    margin: 20px;
     padding: 30px 40px;
     background-color: maroon;
     box-shadow: -10px 5px gray;
