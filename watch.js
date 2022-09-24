@@ -3,7 +3,7 @@ let minute = 0 + '0';
 let hour = '0' + 1;
 setInterval(() => {
     second++;
-    second = converter(second, 60);
+    second = converter(second);
     console.log(second);
     if (parseInt(second, 10) === 60) {
         second = '0' + 0;
