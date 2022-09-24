@@ -3,29 +3,16 @@ let minute = 0 + '0';
 let hour = '0' + 1;
 setInterval(() => {
     second++;
-    let secondString = second.toString().split('');
-    if (secondString.length === 1) {
-        secondString.unshift('0');
-        second = secondString.join('');
-    }
-    // console.log(`second= ${second}`);
+    second = converter(second, 60);
+    console.log(second);
     if (parseInt(second, 10) === 60) {
         second = '0' + 0;
         minute++;
-        let minString = minute.toString().split('');
-        if (minString.length === 1) {
-            minString.unshift('0');
-            minute = minString.join('');
-        }
-        // console.log(`minute=${minute}`);
+        minute = converter(minute);
         if (parseInt(minute, 10) === 60) {
             minute = '0' + 0;
             hour++;
-            let hourString = hour.toString().split('');
-            if (hourString.length === 1) {
-                hourString.unshift('0');
-                hour = hourString.join('');
-            }
+            hour = converter(hour);
             if (parseInt(hour, 10) === 13) {
                 hour = '0' + 1;
             }
@@ -39,3 +26,14 @@ setInterval(() => {
     const hr = document.getElementById('hour');
     hr.innerText = hour;
 }, 1000);
+
+function converter(parameter) {
+    const parameterString = parameter.toString().split('');
+    if (parameterString.length === 1) {
+        parameterString.unshift('0');
+        return parameterString.join('');
+    }
+    else return parameterString.join('');
+
+
+}
